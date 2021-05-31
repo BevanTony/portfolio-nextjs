@@ -39,7 +39,7 @@
         svg{
             transform: rotate(360deg) scale(1.3);
             background:lightsalmon;
-            border-radius: .3rem;
+            border-radius: .5rem;
             transition: 500ms;
         }
     }
@@ -50,4 +50,19 @@
        
     }
 
+}
+
+@media only screen and (max-width :560px){
+    .bio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .bioEmailComponent{
+        display: flex;
+        flex-direction: column;
+    }
 }

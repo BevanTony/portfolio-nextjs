@@ -12,13 +12,17 @@
     padding: 1rem;
     margin-right: 3.5em;
 
+
+    &:last-child{
+        margin-right: 0;
+    }
     
 }
 
 .navbarlogo{
     font-size: 1.5rem;
     flex-grow: 1;
-    padding-left: 3.5em;
+    padding-left: 2em;
     font-weight: 100;
 
     span{
@@ -40,12 +44,64 @@
     font-size: 1.5rem;
     padding-left: 2.5rem;
     font-weight: 100;
+    padding-left: 0;
     li{
         padding-right: .5rem;
+        
     }
+
     
 }
 
 .navbarmeta{
     
 }
+
+@media screen and (max-width: 560px) {
+
+    .navbar { 
+       font-size: 2em; 
+       line-height: 1em;
+    }
+
+    .navbarContent{
+        display: flex;
+        // flex-grow: 2;
+        padding: 1rem;
+        margin-right: 3.5em;
+    }
+
+    .navbarlogo{
+    font-size: 1.5rem;
+    flex-grow: 1;
+    padding-left: 0;
+    font-weight: 100;
+
+    span{
+        padding: .2em;
+        background: none;
+        transition: 500ms;
+        &:hover{
+            transition: 500ms;
+            border-radius: .5em;
+            background: burlywood;
+        }
+    }
+    
+}
+ 
+ }
+
+ @media screen and (max-width:425px){
+    .navbarContent{
+        display: hidden ;
+    }
+
+    .navbarpages{
+
+        li{
+            display: none;
+        }
+    }
+    
+ }
