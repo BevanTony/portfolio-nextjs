@@ -10,18 +10,18 @@ const Bio = ({headshot, name, role, email}) => {
                 <img src={headshot} alt={`headshot of ${name}`}/>
             </div>
 
-            <div className={styles.metaComponent}>
-                <div className={styles.bioNameComponent}>
-                    {name}
+                <div className={styles.metaComponent}>
+                    <div className={styles.bioNameComponent}>
+                        {name}
+                    </div>
+                    <div className={styles.bioRoleComponent}>
+                        {role}
+                    </div>
+                    <div className={styles.bioEmailComponent}>
+                        <FiMail/>                    
+                        {email}
+                    </div>
                 </div>
-                <div className={styles.bioRoleComponent}>
-                    {role}
-                </div>
-                <div className={styles.bioEmailComponent}>
-                    <FiMail/>                    
-                    {email}
-                </div>
-            </div>
         </div>
     )
 }
