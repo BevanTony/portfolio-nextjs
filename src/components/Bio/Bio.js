@@ -1,4 +1,5 @@
 import styles from './Bio.module.scss'
+import Image from 'next/image'
 import { FiMail } from 'react-icons/fi'
 
 const Bio = ({headshot, name, role, email}) => {
@@ -7,7 +8,7 @@ const Bio = ({headshot, name, role, email}) => {
         <div className={styles.bio}>
 
             <div className={styles.bioImageComponent}>
-                <img src={headshot} alt={`headshot of ${name}`}/>
+                <Image src={headshot} alt={`headshot of ${name}`} width={400} height={400} />
             </div>
 
                 <div className={styles.metaComponent}>

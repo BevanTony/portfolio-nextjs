@@ -1,10 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.scss'
 import Bio from '../components/Bio/Bio'
 import ArrowDown from '../components/ArrowDown'
+import SkillSection from '../components/Skills'
+import { motion } from 'framer-motion'
+import { Link as Scroll } from 'react-scroll'
 
 export default function Home() {
+  
   return (
     <div>
       <Head>
@@ -15,14 +19,31 @@ export default function Home() {
 
       <main className={styles.main}>
         <div>
-        <Bio headshot='https://pbs.twimg.com/profile_images/1354787530227367941/Q87bYPSa_400x400.jpg' 
-           name='Bevan Tony Medrano' 
-           role='FrontEnd Web Developer'
-           email='medranobevantony@gmail.com'/>
+        <motion.div initial='hidden' animate='visible' variants={{
+          hidden:{
+            scale:.5,
+            opacity:0
+          },
+          visible:{
+            opacity:1,
+            scale:1,
+            transition:{
+              delay:.5
+            }
+          }
+        }}>
+          <Bio headshot='/DPTwitter.jpeg' 
+            name='Bevan Tony Medrano' 
+            role='FrontEnd Web Developer'
+            email='medranobevantony@gmail.com'/>
+        </motion.div>
         </div>
-
-        <ArrowDown/>
+        <Scroll to='skill-section' smooth={true}>
+          <ArrowDown/>
+        </Scroll>
       </main>
+
+      <SkillSection id='skillsection'/>
 
     </div>
   )

@@ -1,11 +1,14 @@
 import  styles from './ArrowDown.module.scss'
+import Link from 'next/link'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 
 
 const ArrowDown = () => {
     return(
         <div className={styles.arrowDownComponent}>
-            <AiOutlineArrowDown/>
+            <Link href={''}>
+                <AiOutlineArrowDown/>
+            </Link>
         </div>
     )
 }
