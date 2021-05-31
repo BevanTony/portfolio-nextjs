@@ -8,7 +8,7 @@ const Bio = ({headshot, name, role, email}) => {
         <div className={styles.bio}>
 
             <div className={styles.bioImageComponent}>
-                <Image src={headshot} alt={`headshot of ${name}`} width={400} height={400} />
+                <img src={headshot} alt={`headshot of ${name}`}/>
             </div>
 
                 <div className={styles.metaComponent}>

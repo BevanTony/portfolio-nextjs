@@ -3,7 +3,9 @@ import styles from './Skills.module.scss'
 const Skills = () => {
     return(
         <div className={styles.mainContainer} id='skill-section'>
-            New section
+            <div className={styles.title}>
+                <h1>Skills & Tools</h1>
+            </div>
         </div>
     )
     }
