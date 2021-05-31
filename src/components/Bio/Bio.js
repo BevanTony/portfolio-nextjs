@@ -1,13 +1,26 @@
 import styles from './Bio.module.scss'
+import { FiMail } from 'react-icons/fi'
 
-const Bio = ({name, role}) => {
+const Bio = ({headshot, name, role, email}) => {
+
     return(
         <div className={styles.bio}>
-            <div>
-                {name}
+
+            <div className={styles.bioImageComponent}>
+                <img src={headshot} alt={`headshot of ${name}`}/>
             </div>
-            <div>
-                {role}
+
+            <div className={styles.metaComponent}>
+                <div className={styles.bioNameComponent}>
+                    {name}
+                </div>
+                <div className={styles.bioRoleComponent}>
+                    {role}
+                </div>
+                <div className={styles.bioEmailComponent}>
+                    <FiMail/>                    
+                    {email}
+                </div>
             </div>
         </div>
     )
