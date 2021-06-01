@@ -11,8 +11,8 @@ import { Link as Scroll } from 'react-scroll'
 
 export default function Home() {
   const { scrollYProgress } = useViewportScroll()
-  const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [0, .5, 1])
-  const yPosAnim = useTransform(scrollYProgress, [0, 0.4, 1], [0, -250, -100])
+  const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 1])
+  const yPosAnim = useTransform(scrollYProgress, [1, .5, 1], [0, -250, 1])
   
   return (
     <div >
@@ -45,17 +45,32 @@ export default function Home() {
             email='medranobevantony@gmail.com'/>
         </motion.div>
         </div>
-        <Scroll to='skill-section' smooth={true}>
-          <ArrowDown/>
-        </Scroll>
+        <motion.div initial='hidden' animate='visible' variants={{
+          hidden:{
+            scale:3,
+            opacity:0},
+          visible:{
+            opacity:1,
+            scale:1,
+          transition:{
+              delay:1,
+            }
+          }
+        }}>
+          <Scroll to='skill-section' smooth={true}>
+            <ArrowDown/>
+          </Scroll>
+        </motion.div>
       </main>
       <motion.div
       style={{
         scale: scaleAnim,
-        // y: yPosAnim,
+        y: yPosAnim,
+        
       }}
+      
     >
-          <SkillSection id='skillsection'/>
+          <SkillSection skillset={SkillSet} id='skillsection'/>
         </motion.div>
 
     </div>
