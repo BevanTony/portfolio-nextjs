@@ -2,6 +2,7 @@ import styles from './Navbar.module.scss'
 import pages from './navbarPages'
 
 const Navbar = () => {
+
     return(
         <div className={styles.navbar}>
 
@@ -13,7 +14,9 @@ const Navbar = () => {
 
                 <div className={styles.navbarpages}>
                         {pages.map((page, index) => (
-                            <li key={index}>{page.label}</li>
+                            <div key={index}>
+                                <li>{page.icon} {page.label}</li>
+                            </div>
                             ))}
                 </div>
 

@@ -1,9 +1,10 @@
 .navbar{
     display: flex;  
-    position: absolute;  
+    // position: fixed;  
     width: 100%;
     background: #75DDD1;
     line-height: 2.5em;
+    z-index: 1;
 }
 
 .navbarContent{
@@ -25,8 +26,12 @@
     padding-left: 2em;
     font-weight: 100;
     cursor: default;
+
+
     
     span{
+        font-family: 'Overpass';
+        font-weight: 800;
         padding: .2em;
         background: none;
         transition: 500ms;

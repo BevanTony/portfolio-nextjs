@@ -1,19 +1,33 @@
 import Head from 'next/head'
-import { useRef, useState} from 'react'
+import { useRef, useState, useEffect} from 'react'
 import styles from '../styles/Home.module.scss'
 import Bio from '../components/Bio/Bio'
 import ArrowDown from '../components/ArrowDown'
 import SkillSection from '../components/Skills'
+import Navbar from '../components/Navbar/Navbar'
+import Contact from '../components/Contact/Contact'
+
 
 import SkillSet from '../components/Skills/Skillset'
-import { motion, scrollYProgress, AnimatePresence, useTransform, useViewportScroll} from 'framer-motion'
-import { Link as Scroll } from 'react-scroll'
+import { motion, scrollYProgress, AnimatePresence, useTransform, useViewportScroll, useMotionValue} from 'framer-motion'
 
 export default function Home() {
   const { scrollYProgress } = useViewportScroll()
-  const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1.5, 1])
-  const yPosAnim = useTransform(scrollYProgress, [1, .5, 1], [0, -250, 1])
-  
+  const [currentPrecent, setCurrentPercent] = useState(null)
+  const yRange = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const skillSectionAnim = useTransform(scrollYProgress, [0, .68, 1], [.5, 1, 1])
+
+
+  useEffect(
+    () =>
+        yRange.onChange((v) => {
+            setCurrentPercent(Math.trunc(yRange.current))
+        }),
+    [yRange]
+);
+
+        console.log(currentPrecent)
+
   return (
     <div >
       <Head>
@@ -23,8 +37,10 @@ export default function Home() {
       </Head>
 
     <div>
-
-      <main className={styles.main}  >
+      <motion.div>
+        <Navbar/>
+      </motion.div>
+      <main className={styles.main}>
         <div> 
         <motion.div initial='hidden' animate='visible' variants={{
           hidden:{
@@ -57,21 +73,16 @@ export default function Home() {
             }
           }
         }}>
-          <Scroll to='skill-section' smooth={true}>
             <ArrowDown/>
-          </Scroll>
         </motion.div>
       </main>
-      <motion.div
-      style={{
-        scale: scaleAnim,
-        y: yPosAnim,
-        
-      }}
-      
-    >
-          <SkillSection skillset={SkillSet} id='skillsection'/>
-        </motion.div>
+      {/* <motion.div style={{scale:skillSectionAnim, opacity:skillSectionAnim}}> */}
+        <SkillSection skillset={SkillSet}/>
+      {/* </motion.div> */}
+
+        <div>
+          <Contact/>
+        </div>
 
     </div>
     </div>

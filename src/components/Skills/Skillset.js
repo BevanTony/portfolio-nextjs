@@ -17,16 +17,20 @@ const data = [
         image:'/javascript.png',
     },
     {
-        name:'GitHub',
-        image:'/github.png'
-    },
-    {
         name:'Django',
         image:'/django.png'
     },
     {
         name:'DjangoRest',
         image:'/DRF.png'
+    },
+    {
+        name:'Python',
+        image:'/python.png'
+    },
+    {
+        name:'GitHub',
+        image:'/github.png'
     },
     {
         name:'Framer Motion',

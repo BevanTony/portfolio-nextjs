@@ -1,6 +1,7 @@
 import styles from './Bio.module.scss'
 import Image from 'next/image'
-import { FiMail } from 'react-icons/fi'
+import { GrMail } from 'react-icons/gr'
+
 
 const Bio = ({headshot, name, role, email}) => {
 
@@ -19,7 +20,7 @@ const Bio = ({headshot, name, role, email}) => {
                         {role}
                     </div>
                     <div className={styles.bioEmailComponent}>
-                        <FiMail/>                    
+                        <GrMail/>                    
                         {email}
                     </div>
                 </div>

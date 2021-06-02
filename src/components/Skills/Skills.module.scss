@@ -5,6 +5,7 @@
     justify-content: center;
     text-align: center;
     padding-top: 3.5em;
+    font-family: Overpass;
     h1{
         margin-top: 0
     }
@@ -26,7 +27,7 @@
         padding:.5em;
         height:auto;
         width: 45%;
-        filter: blur(2px);
+        filter: blur(1px);
         &:hover{
             padding:.5em;
             filter: blur(0px);
