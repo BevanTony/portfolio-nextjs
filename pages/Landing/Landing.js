@@ -1,4 +1,4 @@
-import styles from './Landing.module.scss'
+import styles from '../../styles/Home.module.scss'
 import Typist from 'react-text-typist';
 import { motion } from 'framer-motion'
 
@@ -13,8 +13,8 @@ const Bio = () => {
                     opacity:1,
                     scale:1,
                     }
-            }} className={styles.container}>
-                <div className={styles.introduction}>
+            }} className={styles.landingContainer}>
+                <div className={styles.landingIntroduction}>
                     <h1><Typist sentences={['HI!', 'Hello!', 'Kumusta!']} loop={true}/></h1>
                 </div>
             </motion.div>

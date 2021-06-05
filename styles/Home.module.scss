@@ -12,5 +12,135 @@
   justify-content: center;
 }
 
+//landing
+.landingContainer{
+  display: flex;
+  height: 100vh;
+  min-height: 100vh;
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.landingIntroduction{
+  
+  
+  h1{
+      font-family: 'Staatliches', cursive;
+      font-size: 5em;
+  }
+}
+
+
+.navbar{
+  display: flex;  
+  position: fixed;
+  color: azure; 
+  width: 100%;
+  background-color: none;
+  line-height: 2.5em;
+  z-index: 1;
+}
+
+.navbarContent{
+  display: flex;
+  flex-grow: 2;
+  padding: 1em;
+
+  ul{
+      margin:0;
+  }
+
+  &:last-child{
+      margin-right: 0;
+  }
+  
+}
+
+.navbarlogo{
+  font-size: 1.5em;
+  flex-grow: 1;
+  padding-left: 2em;
+  // font-weight: 100;
+  cursor: default;
+
+  
+  span{
+      font-family: 'Overpass';
+      font-weight: 800;
+      padding: .2em;
+      background: none;
+      transition: 500ms;
+  }
+  
+}
+
+.navbarpages{
+  display: flex;
+  list-style: none;
+  font-size: 1.5em;
+  padding-left: 2.5em;
+  font-weight: 100;
+  li{
+
+      padding: 0em 3em 0em 3em;
+      border-right:1px solid white;
+      cursor: default ;
+      &:last-child{
+          border-right:none
+      }
+
+
+  }
+  
+
+  
+}
+
+@media screen and (max-width: 560px) {
+
+  .navbar { 
+     font-size: 2em; 
+  }
+
+  .navbarContent{
+      display: flex;
+      // flex-grow: 2;
+      padding: 1em;
+      margin-right: 3.5em;
+  }
+
+  .navbarlogo{
+  font-size: 1.5em;
+  flex-grow: 1;
+  padding-left: 0;
+  font-weight: 100;
+
+  span{
+      padding: .2em;
+      background: none;
+      transition: 500ms;
+  
+  }
+  
+}
+
+}
+
+@media screen and (max-width:425px){
+  .navbarContent{
+      display: hidden ;
+  }
+
+  .navbarpages{
+
+      li{
+          display: none;
+      }
+  }
+  
+}
+
 
 
