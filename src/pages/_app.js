@@ -1,6 +1,6 @@
 import '../styles/globals.scss'
 import '../components/Landing/Landing.module.scss'
-import '../components/About/About.module.scss'
+import './About/About.module.scss'
 import Navbar from '../components/Navbar/Navbar'
 import { AnimatePresence } from 'framer-motion'
 
