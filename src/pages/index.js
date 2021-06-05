@@ -1,14 +1,7 @@
 import Head from 'next/head'
-import { useRef, useState, useEffect} from 'react'
+import { useState, useEffect} from 'react'
 import styles from '../styles/Home.module.scss'
-import Bio from '../components/Bio/Bio'
-import ArrowDown from '../components/ArrowDown'
-import SkillSection from '../components/Skills'
-import Navbar from '../components/Navbar/Navbar'
-import Contact from '../components/Contact/Contact'
-
-
-import SkillSet from '../components/Skills/Skillset'
+import Landing from '../components/Landing/Landing'
 import { motion, scrollYProgress, AnimatePresence, useTransform, useViewportScroll, useMotionValue} from 'framer-motion'
 
 export default function Home() {
@@ -26,7 +19,6 @@ export default function Home() {
     [yRange]
 );
 
-        console.log(currentPrecent)
 
   return (
     <div >
@@ -37,12 +29,9 @@ export default function Home() {
       </Head>
 
     <div>
-      <motion.div>
-        <Navbar/>
-      </motion.div>
       <main className={styles.main}>
         <div> 
-        <motion.div initial='hidden' animate='visible' variants={{
+        <motion.div exit={{opacity:0}} initial='hidden' animate='visible' variants={{
           hidden:{
             scale:.5,
             opacity:0
@@ -55,34 +44,11 @@ export default function Home() {
             }
           }
         }}>
-          <Bio headshot='/DPTwitter.jpeg' 
-            name='Bevan Tony Medrano' 
-            role='FrontEnd Web Developer'
-            email='medranobevantony@gmail.com'/>
-        </motion.div>
+          </motion.div>
+          <Landing/>
         </div>
-        <motion.div initial='hidden' animate='visible' variants={{
-          hidden:{
-            scale:3,
-            opacity:0},
-          visible:{
-            opacity:1,
-            scale:1,
-          transition:{
-              delay:1,
-            }
-          }
-        }}>
-            <ArrowDown/>
-        </motion.div>
       </main>
-      {/* <motion.div style={{scale:skillSectionAnim, opacity:skillSectionAnim}}> */}
-        <SkillSection skillset={SkillSet}/>
-      {/* </motion.div> */}
 
-        <div>
-          <Contact/>
-        </div>
 
     </div>
     </div>

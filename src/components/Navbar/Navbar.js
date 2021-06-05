@@ -1,30 +1,36 @@
 import styles from './Navbar.module.scss'
 import pages from './navbarPages'
+import Link from 'next/link'
+import { AnimatePresence, motion } from 'framer-motion'
+
 
 const Navbar = () => {
 
+    const list = {visible:{opacity:1}, hidden:{opacity:0} }
+    const item ={ visible:{opacity:1, y:0, transition:{duration:1}}, hidden:{opacity:1, y:-100}}
+    
+
     return(
-        <div className={styles.navbar}>
+        <motion.div className={styles.navbar}>
 
             <div className={styles.navbarContent}>
 
                 <div className={styles.navbarlogo}>
-                    <span>BevanTony</span>
+                    <Link href='/'><span>BevanTony</span></Link>
                 </div>
 
-                <div className={styles.navbarpages}>
-                        {pages.map((page, index) => (
-                            <div key={index}>
-                                <li>{page.icon} {page.label}</li>
-                            </div>
-                            ))}
-                </div>
+                <motion.ul initial='hidden' animate='visible' variants={list}>
+                    <motion.div  className={styles.navbarpages}>
+                            {pages.map((page, index) => (
+                                    <Link href={page.path}>
+                                            <motion.li variants={item}>{page.icon} {page.label}</motion.li>
+                                        </Link>
+                                ))}
+                    </motion.div>
+                </motion.ul>
 
-                <div className={styles.navbarmeta}>
-
-                </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

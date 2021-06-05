@@ -1,5 +1,5 @@
 import React from 'react'
-import Bio from './Bio'
+import Bio from './Landing'
 
 export default {
     title: 'Component/Bio',
@@ -9,7 +9,7 @@ export default {
 
 const Template = (args) => (
     <Bio
-    headshot='https://pbs.twimg.com/profile_images/1354787530227367941/Q87bYPSa_400x400.jpg'
+    photo='/tower1.jpg'
     name='Bevan Tony Medrano'
     role='FrontEnd Web Developer'
     email='medranobevantony@gmail.com'
