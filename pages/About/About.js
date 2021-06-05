@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import styles from './About.module.scss'
-import { motion, useTransform, useViewportScroll, useElementScroll } from 'framer-motion'
+import { motion, useTransform, useViewportScroll } from 'framer-motion'
 import Typist from 'react-typist';
 
 function About(){

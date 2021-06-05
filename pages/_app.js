@@ -1,6 +1,5 @@
 import '../styles/globals.scss'
-import '../styles/Home.module.scss'
-import Navbar from '../components/Navbar/Navbar'
+import Navbar from './Navbar/Navbar'
 import { AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps, router }) {

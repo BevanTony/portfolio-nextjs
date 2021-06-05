@@ -1,5 +1,3 @@
-
-
 const pages = [
     {
         label:'About',

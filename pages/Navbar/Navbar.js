@@ -1,7 +1,7 @@
 import styles from './Navbar.module.scss'
 import pages from './navbarPages'
 import Link from 'next/link'
-import { AnimatePresence, motion } from 'framer-motion'
+import {motion } from 'framer-motion'
 
 
 const Navbar = () => {
@@ -22,8 +22,8 @@ const Navbar = () => {
                 <motion.ul initial='hidden' animate='visible' variants={list}>
                     <motion.div  className={styles.navbarpages}>
                             {pages.map((page, index) => (
-                                    <Link href={page.path}>
-                                            <motion.li variants={item}>{page.icon} {page.label}</motion.li>
+                                    <Link key={index} href={page.path}>
+                                            <motion.li  variants={item}>{page.icon} {page.label}</motion.li>
                                         </Link>
                                 ))}
                     </motion.div>

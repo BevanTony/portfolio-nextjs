@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useState, useEffect} from 'react'
 import styles from '../styles/Home.module.scss'
-import Landing from '../components/Landing/Landing'
+import Landing from './Landing/Landing'
 import { motion, scrollYProgress, AnimatePresence, useTransform, useViewportScroll, useMotionValue} from 'framer-motion'
 
 export default function Home() {
