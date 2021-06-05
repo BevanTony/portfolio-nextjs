@@ -1,7 +1,6 @@
 import styles from './Landing.module.scss'
-import Image from 'next/image'
 import Typist from 'react-text-typist';
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const Bio = () => {
     return(
