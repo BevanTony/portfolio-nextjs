@@ -1,7 +1,7 @@
 import styles from './Navbar.module.scss'
-import pages from './navbarPages'
+import pages from '../../components/navbarPages'
 import Link from 'next/link'
-import {motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 const Navbar = () => {
