@@ -4,17 +4,35 @@
     height: 100vh;
     min-height: 100vh;
     color: white;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    svg{
+        font-size: 2.5em;
+        margin: 0em .5em 0 .5em 
+    }
 
 }
 
 .introduction{
     
-    
     h1{
         font-family: 'Staatliches', cursive;
         font-size: 5em;
+    }
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+
+    svg{
+        text-decoration: none;
+    }
+
+    li{
+        list-style-type: none;
     }
 }
 

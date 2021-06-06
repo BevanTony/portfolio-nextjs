@@ -1,24 +1,24 @@
-.container{
+.aboutContainer{
     height: 150vh;
     color:white;
     background-color:black;
     display: flex;
     overflow: hidden;
     align-content: center;
-    
 }
 
-.aboutme{
-    scroll-snap-type: y mandatory;
-    background-color: black;
+.textAboutMe{
+    z-index: 1;
+    width: 50%; 
+    display: flex;
     align-items: flex-start;
     text-align: left;
-    width: 100%;
     h1{
         
         margin: 1.5em 0em 0em 1em;
         font-family: "Staatliches";
         font-size: 5em;
+        inline-size: max-content;
 
         &:nth-child(2){
             margin-top:0;
@@ -40,8 +40,20 @@
         margin-left: 3.5em
     }
 
-    span{
-        visibility: hidden;
+}
+
+.imageAboutMe{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+    align-self: center  ;
+    
+    img{
+        border-radius: 5%;
+        width: 100;
+        height: 100%;
     }
 
 }
