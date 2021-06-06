@@ -70,7 +70,7 @@ function About(){
                         <motion.h1 style={{y:yProgammer, opacity:opacityProgrammer}}> A Programmer.</motion.h1>
                         <h2>About Me:</h2>
                         <h2>I am a BSIT graduate in the philippines. I've been programming for {String(yearsOfExp)} years.
-                         I enjoy the process of creating simple and elegant looking websites.</h2>
+                         I enjoy the process of creating elegant looking websites.</h2>
                     </motion.div>
 
                 </motion.div>
@@ -81,7 +81,7 @@ function About(){
             </div>
 
             <div className={styles.skillsContainer}>
-                <Skill/>
+                <Skill currentYPos={currentYPos}/>
             </div>
 
             <div className={styles.contactContainer}>

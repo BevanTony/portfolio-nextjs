@@ -3,22 +3,56 @@
     background-color: black;
     color: white;
     display: flex;
+    flex-direction: column;
 }
 
-.itemContainer{
+.experienceContainer{
+    display: flex;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+    h2{
+
+        &:nth-child(2){
+            border-bottom: 1px solid #fff; 
+            line-height: 0.1em;
+            margin: 10px 0 20px; 
+    
+        }
+
+        padding: 0em 1.5em 0em 1.5em;
+
+        span{
+            background:black; 
+            padding:0 10px; 
+        }
+    }
+
+
+}
+
+
+
+.skillContainer{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    height: 50%;
+    width: 100%;
+    
+    img{
+        padding:.5em;
+        height:50%;
+        width:15%;    
+        filter: contrast(160%);
 
-}
-
-
-.itemContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 50%;
+        &:nth-child(1){
+            filter: contrast(160%) brightness(0) invert(1);
+        }
+    }
     
 }
