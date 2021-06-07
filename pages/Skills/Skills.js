@@ -1,8 +1,11 @@
 import styles from './Skills.module.scss'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import skills from '../../components/skillList'
+import frontend from '../../components/frontendList'
+import backend from '../../components/backendList'
+
 import experience from '../../components/expList'
+
 
 function Skills(props){
 
@@ -20,19 +23,15 @@ function Skills(props){
 
     return(
         <div className={styles.container}>
-            <div className={styles.experienceContainer}>
-                {experience.map((item, index) => (
-                    <div className={styles.exp}>
-                        <h2>{item.position}</h2>
-                        <h2><span>{item.company}</span></h2>
-                        <h2>{new Date(item.date).toDateString()}</h2>
-                    </div>
+            <div className={styles.skillContainer}>
+                {backend.map((item,index) => (
+                        <motion.img whileHover={{scale:1.1}} transition={{duration:.6}} key={index} src={item.logo}/>
                 ))}
             </div>
             
             <div className={styles.skillContainer}>
-                {skills.map((item,index) => (
-                        <img src={item.logo}/>
+                {frontend.map((item,index) => (
+                        <motion.img whileHover={{scale:1.1}} transition={{duration:.6}} key={index} src={item.logo}/>
                 ))}
             </div>
 

@@ -3,11 +3,12 @@ import Typist from 'react-text-typist';
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import logo from '../../components/logoLink'
-
+import About from '../About/About'
 
 const Bio = () => {
 
     return(
+        <>
             <motion.div exit={{opacity:1, y:500}} transition={{ duration:1}} initial='hidden' animate='visible' variants={{
                 hidden:{
                     opacity:0,
@@ -24,8 +25,13 @@ const Bio = () => {
                             <motion.li whileHover={{scale:1.2}} key={index}><Link href={item.path}>{item.logo}</Link></motion.li>
                         ))}
                 </div>
+
+                <div>
+                </div>
             </motion.div>
+        </>
     )
+    
 }
 
 export default Bio

@@ -1,4 +1,4 @@
-const skills = [
+const frontendList = [
     {
         name:'NextJS',
         logo:'/nextjs.png',
@@ -17,4 +17,4 @@ const skills = [
     },
 ]
 
-export default skills
+export default frontendList
